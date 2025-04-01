@@ -443,4 +443,7 @@ export const allDestinations: Destination[] = [
     id: "greece-mykonos",
     name: "Mykonos",
     country: "Greece",
-    image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?ixlib=rb
+    image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    eventCount: 87
+  }
+];
