@@ -25,6 +25,7 @@ const App: React.FC = () => {
               <Route path="/" element={<Index />} />
               <Route path="/discover" element={<Discover />} />
               <Route path="/destinations" element={<Destinations />} />
+              <Route path="/destinations/:id" element={<Destinations />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
