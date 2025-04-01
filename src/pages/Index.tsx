@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Museum, Tour } from 'lucide-react';
+import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Navbar from '@/components/layout/Navbar';
@@ -140,13 +139,13 @@ const Index = () => {
                 </Link>
                 <Link to="/events/category/museums">
                   <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <Museum size={16} className="mr-2" />
+                    <Building size={16} className="mr-2" />
                     Museums
                   </Button>
                 </Link>
                 <Link to="/events/category/tours">
                   <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <Tour size={16} className="mr-2" />
+                    <MapPin size={16} className="mr-2" />
                     Tours
                   </Button>
                 </Link>
