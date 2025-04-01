@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building } from 'lucide-react';
+import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Navbar from '@/components/layout/Navbar';
@@ -119,21 +120,25 @@ const Index = () => {
               <div className="flex flex-wrap gap-4">
                 <Link to="/events/category/concerts">
                   <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+                    <Music size={16} className="mr-2" />
                     Concerts
                   </Button>
                 </Link>
                 <Link to="/events/category/sports">
                   <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+                    <Calendar size={16} className="mr-2" />
                     Sports
                   </Button>
                 </Link>
                 <Link to="/events/category/theater">
                   <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+                    <Ticket size={16} className="mr-2" />
                     Theater
                   </Button>
                 </Link>
                 <Link to="/events/category/food">
                   <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+                    <Utensils size={16} className="mr-2" />
                     Food &amp; Dining
                   </Button>
                 </Link>

@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import EventCard, { EventCardProps } from '@/components/events/EventCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search, Filter, Calendar, Music, Ticket, Building, MapPin } from 'lucide-react';
+import { Search, Filter, Calendar, Music, Ticket, Building, MapPin, Utensils } from 'lucide-react';
 
 // Sample data
 const allEvents: EventCardProps[] = [
@@ -96,7 +95,7 @@ const categories = [
   { name: 'Concerts', icon: Music },
   { name: 'Sports', icon: Calendar },
   { name: 'Theater', icon: Ticket },
-  { name: 'Food', icon: Calendar },
+  { name: 'Food', icon: Utensils },
   { name: 'Museums', icon: Building },
   { name: 'Tours', icon: MapPin },
 ];
