@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils } from 'lucide-react';
+import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Navbar from '@/components/layout/Navbar';
@@ -10,6 +10,7 @@ import EventCard, { EventCardProps } from '@/components/events/EventCard';
 import DestinationCard, { DestinationCardProps } from '@/components/destinations/DestinationCard';
 import { DateRangePicker } from '@/components/ui/date-range-picker';
 import { DateRange } from 'react-day-picker';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
 // Sample data
 const featuredEvents: EventCardProps[] = [
@@ -81,6 +82,7 @@ const popularDestinations: DestinationCardProps[] = [
 
 const Index = () => {
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
+  const [tripType, setTripType] = useState<string>("family");
   
   return (
     <div className="flex flex-col min-h-screen">
@@ -125,6 +127,35 @@ const Index = () => {
                     onDateRangeChange={setDateRange}
                     className="md:w-[280px]"
                   />
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                  <div className="mb-2 text-white text-sm">Trip Type:</div>
+                  <ToggleGroup 
+                    type="single" 
+                    value={tripType} 
+                    onValueChange={(value) => {
+                      if (value) setTripType(value);
+                    }}
+                    className="justify-start"
+                  >
+                    <ToggleGroupItem value="family" aria-label="Family trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Users className="mr-2 h-4 w-4" />
+                      Family
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="couple" aria-label="Couple trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Heart className="mr-2 h-4 w-4" />
+                      Couple
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="friends" aria-label="Friends trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Users className="mr-2 h-4 w-4" />
+                      Friends
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="business" aria-label="Business trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Briefcase className="mr-2 h-4 w-4" />
+                      Business
+                    </ToggleGroupItem>
+                  </ToggleGroup>
                 </div>
                 
                 <Button className="rounded-full px-6 w-full md:w-auto self-end">
