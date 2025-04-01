@@ -1,4 +1,3 @@
-
 import { Destination } from './types';
 
 // North and South American destinations
@@ -8,7 +7,7 @@ export const americasDestinations: Destination[] = [
     id: "argentina-buenos-aires",
     name: "Buenos Aires",
     country: "Argentina",
-    image: "https://images.unsplash.com/photo-1536632296143-cbc03b11a312?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1612294037637-ec328d0e075e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 120
   },
   
@@ -17,7 +16,7 @@ export const americasDestinations: Destination[] = [
     id: "bahamas-nassau",
     name: "Nassau",
     country: "Bahamas",
-    image: "https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1599861758261-4d5f6db25555?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 76
   },
   
@@ -33,35 +32,35 @@ export const americasDestinations: Destination[] = [
     id: "brazil-sao-paulo",
     name: "São Paulo",
     country: "Brazil",
-    image: "https://images.unsplash.com/photo-1564519644-e543b539a79f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1543059080-f9b1272213a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 230
   },
   {
     id: "brazil-salvador",
     name: "Salvador",
     country: "Brazil",
-    image: "https://images.unsplash.com/photo-1622575335728-0a1233e1b025?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1620742320994-bb726e80c049?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 95
   },
   {
     id: "brazil-foz-do-iguacu",
     name: "Foz do Iguaçu",
     country: "Brazil",
-    image: "https://images.unsplash.com/photo-1579969984577-7b04a2f9801b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1578002171601-902a5f6fd640?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 56
   },
   {
     id: "brazil-manaus",
     name: "Manaus",
     country: "Brazil",
-    image: "https://images.unsplash.com/photo-1629993470942-8187e672be2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1553210126-a19e6ab3a101?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 43
   },
   {
     id: "brazil-florianopolis",
     name: "Florianópolis",
     country: "Brazil",
-    image: "https://images.unsplash.com/photo-1623692853978-fb0827461728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1587203562738-ce197aba5257?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 78
   },
   
@@ -162,7 +161,7 @@ export const americasDestinations: Destination[] = [
     id: "dominican-republic-punta-cana",
     name: "Punta Cana",
     country: "Dominican Republic",
-    image: "https://images.unsplash.com/photo-1627293509201-9693e80de6e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1610641818989-bcd0342f23fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 94
   },
   
@@ -171,21 +170,21 @@ export const americasDestinations: Destination[] = [
     id: "jamaica-montego-bay",
     name: "Montego Bay",
     country: "Jamaica",
-    image: "https://images.unsplash.com/photo-1591941160084-02f21621f1d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1550968790-9d0a969a2506?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 87
   },
   {
     id: "jamaica-ocho-rios",
     name: "Ocho Rios",
     country: "Jamaica",
-    image: "https://images.unsplash.com/photo-1629292098316-c61d62f9f76a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1545293527-e26058c5b48b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 64
   },
   {
     id: "jamaica-negril",
     name: "Negril",
     country: "Jamaica",
-    image: "https://images.unsplash.com/photo-1594188847527-1953fc2b3c25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
     eventCount: 57
   },
   

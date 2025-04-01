@@ -5,6 +5,7 @@ import { asiaDestinations } from './asia';
 import { europeDestinations } from './europe';
 import { africaDestinations } from './africa';
 import { australiaDestinations } from './australia';
+import { northAmericaDestinations } from './northAmerica';
 
 // Merge all destination arrays
 export const allDestinations: Destination[] = [
@@ -12,7 +13,8 @@ export const allDestinations: Destination[] = [
   ...asiaDestinations,
   ...europeDestinations,
   ...africaDestinations,
-  ...australiaDestinations
+  ...australiaDestinations,
+  ...northAmericaDestinations
 ];
 
 // Helper functions for filtering destinations
