@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase } from 'lucide-react';
+import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { DateRangePicker } from '@/components/ui/date-range-picker';
@@ -62,10 +62,6 @@ const HeroSection = () => {
                 }}
                 className="justify-start"
               >
-                <ToggleGroupItem value="family" aria-label="Family trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
-                  <Users className="mr-2 h-4 w-4" />
-                  Family
-                </ToggleGroupItem>
                 <ToggleGroupItem value="solo" aria-label="Solo trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
                   <User className="mr-2 h-4 w-4" />
                   Solo
@@ -74,6 +70,10 @@ const HeroSection = () => {
                   <Heart className="mr-2 h-4 w-4" />
                   Couple
                 </ToggleGroupItem>
+                <ToggleGroupItem value="family" aria-label="Family trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <Users className="mr-2 h-4 w-4" />
+                  Family
+                </ToggleGroupItem>
                 <ToggleGroupItem value="friends" aria-label="Friends trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
                   <Users className="mr-2 h-4 w-4" />
                   Friends
@@ -81,6 +81,10 @@ const HeroSection = () => {
                 <ToggleGroupItem value="business" aria-label="Business trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
                   <Briefcase className="mr-2 h-4 w-4" />
                   Business
+                </ToggleGroupItem>
+                <ToggleGroupItem value="study" aria-label="Study trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <BookOpen className="mr-2 h-4 w-4" />
+                  Study
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
