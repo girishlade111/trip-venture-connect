@@ -115,10 +115,6 @@ const HeroSection = () => {
                   <Utensils className="mr-2 h-4 w-4" />
                   Food & Dining
                 </ToggleGroupItem>
-                <ToggleGroupItem value="museums" aria-label="Museums" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
-                  <Building className="mr-2 h-4 w-4" />
-                  Museums
-                </ToggleGroupItem>
                 <ToggleGroupItem value="tours" aria-label="Tours" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
                   <MapPin className="mr-2 h-4 w-4" />
                   Tours
