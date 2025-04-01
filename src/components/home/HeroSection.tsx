@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase, BookOpen } from 'lucide-react';
+import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase, BookOpen, Plane, Car, Bed, Bus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { DateRangePicker } from '@/components/ui/date-range-picker';
@@ -11,6 +11,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const HeroSection = () => {
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [tripType, setTripType] = useState<string>("family");
+  const [products, setProducts] = useState<string[]>(["flights"]);
   const [activities, setActivities] = useState<string[]>(["concerts"]);
   const isMobile = useIsMobile();
   
@@ -87,6 +88,39 @@ const HeroSection = () => {
                 <ToggleGroupItem value="study" aria-label="Study trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30 mb-1">
                   <BookOpen className="mr-2 h-4 w-4" />
                   Study
+                </ToggleGroupItem>
+              </ToggleGroup>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+              <div className="mb-2 text-white text-sm">Preferred Products:</div>
+              <ToggleGroup 
+                type="multiple" 
+                value={products} 
+                onValueChange={(value) => {
+                  if (value.length) setProducts(value);
+                }}
+                className="flex flex-wrap justify-start gap-2"
+              >
+                <ToggleGroupItem value="flights" aria-label="Flights" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <Plane className="mr-2 h-4 w-4" />
+                  Flights
+                </ToggleGroupItem>
+                <ToggleGroupItem value="cars" aria-label="Cars" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <Car className="mr-2 h-4 w-4" />
+                  Cars
+                </ToggleGroupItem>
+                <ToggleGroupItem value="stays" aria-label="Stays" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <Bed className="mr-2 h-4 w-4" />
+                  Stays
+                </ToggleGroupItem>
+                <ToggleGroupItem value="attractions" aria-label="Attractions" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <MapPin className="mr-2 h-4 w-4" />
+                  Attractions
+                </ToggleGroupItem>
+                <ToggleGroupItem value="transportation" aria-label="Transportation" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <Bus className="mr-2 h-4 w-4" />
+                  Transportation
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
