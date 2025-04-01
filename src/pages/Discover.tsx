@@ -5,7 +5,7 @@ import Footer from '@/components/layout/Footer';
 import EventCard, { EventCardProps } from '@/components/events/EventCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Search, Filter, Calendar, Music, Ticket } from 'lucide-react';
+import { Search, Filter, Calendar, Music, Ticket, Museum, Tour } from 'lucide-react';
 
 // Sample data
 const allEvents: EventCardProps[] = [
@@ -97,6 +97,8 @@ const categories = [
   { name: 'Sports', icon: Calendar },
   { name: 'Theater', icon: Ticket },
   { name: 'Food', icon: Calendar },
+  { name: 'Museums', icon: Museum },
+  { name: 'Tours', icon: Tour },
 ];
 
 const Discover = () => {
