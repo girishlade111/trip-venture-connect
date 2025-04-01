@@ -1,3 +1,4 @@
+// Define the Destination interface once
 export interface Destination {
   id: string;
   name: string;
@@ -6,6 +7,20 @@ export interface Destination {
   eventCount: number;
 }
 
+// Helper functions for filtering destinations
+export const getUniqueCountries = (): string[] => {
+  const countries = allDestinations.map(destination => destination.country);
+  return [...new Set(countries)].sort();
+};
+
+export const getDestinationsByCountry = (country: string): Destination[] => {
+  if (country === 'all') {
+    return allDestinations;
+  }
+  return allDestinations.filter(destination => destination.country === country);
+};
+
+// All destinations data
 export const allDestinations: Destination[] = [
   // Argentina
   {
@@ -428,31 +443,4 @@ export const allDestinations: Destination[] = [
     id: "greece-mykonos",
     name: "Mykonos",
     country: "Greece",
-    image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    eventCount: 87
-  },
-  
-  // Hungary
-  {
-    id: "hungary-budapest",
-    name: "Budapest",
-    country: "Hungary",
-    image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    eventCount: 132
-  },
-  
-  // Iceland
-  {
-    id: "iceland-reykjavik",
-    name: "Reykjavik",
-    country: "Iceland",
-    image: "https://images.unsplash.com/photo-1504284402456-bdb9d97425b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    eventCount: 78
-  },
-  
-  // India
-  {
-    id: "india-delhi",
-    name: "Delhi",
-    country: "India",
-    image: "https://images.unsplash.com/photo-1587
+    image: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?ixlib=rb

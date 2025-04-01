@@ -2,11 +2,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import DestinationCard, { DestinationCardProps } from '@/components/destinations/DestinationCard';
+import DestinationCard from '@/components/destinations/DestinationCard';
+import { Destination } from '@/data/destinationsData';
 import { ArrowRight } from 'lucide-react';
 
 interface DestinationsSectionProps {
-  popularDestinations: DestinationCardProps[];
+  popularDestinations: Destination[];
 }
 
 const DestinationsSection = ({ popularDestinations }: DestinationsSectionProps) => {
