@@ -23,6 +23,7 @@ const Destinations = () => {
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>(allDestinations);
   
   const countries = getUniqueCountries();
+  const totalDestinations = allDestinations.length;
 
   useEffect(() => {
     let results = getDestinationsByCountry(selectedCountry);
@@ -47,7 +48,7 @@ const Destinations = () => {
           <div className="container">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Explore Destinations</h1>
             <p className="text-xl md:text-2xl max-w-3xl">
-              Discover amazing events in 160 cities around the world
+              Currently showcasing {totalDestinations} destinations from our catalog of 160 cities
             </p>
           </div>
         </section>
