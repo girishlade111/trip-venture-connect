@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import DestinationCard from '@/components/destinations/DestinationCard';
-import { Destination } from '@/data/destinationsData';
+import { Destination } from '@/data/destinations';
 import { ArrowRight } from 'lucide-react';
 
 interface DestinationsSectionProps {

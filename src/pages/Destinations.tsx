@@ -1,10 +1,9 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import DestinationCard from '@/components/destinations/DestinationCard';
-import { allDestinations, getUniqueCountries, getDestinationsByCountry, Destination } from '@/data/destinationsData';
+import { allDestinations, getUniqueCountries, getDestinationsByCountry, Destination } from '@/data/destinations';
 import { Search } from 'lucide-react';
 import { 
   Select, 
@@ -43,7 +42,6 @@ const Destinations = () => {
       <Navbar />
       
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="bg-teal-800 py-16 text-white">
           <div className="container">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Explore Destinations</h1>
@@ -53,7 +51,6 @@ const Destinations = () => {
           </div>
         </section>
         
-        {/* Filter Section */}
         <section className="py-8 bg-teal-50">
           <div className="container">
             <Card>
@@ -109,7 +106,6 @@ const Destinations = () => {
           </div>
         </section>
         
-        {/* Destinations List */}
         <section className="py-16">
           <div className="container">
             <h2 className="text-3xl font-bold mb-8">
