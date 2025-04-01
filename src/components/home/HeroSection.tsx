@@ -6,11 +6,13 @@ import { Input } from '@/components/ui/input';
 import { DateRangePicker } from '@/components/ui/date-range-picker';
 import { DateRange } from 'react-day-picker';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const HeroSection = () => {
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [tripType, setTripType] = useState<string>("family");
   const [activities, setActivities] = useState<string[]>(["concerts"]);
+  const isMobile = useIsMobile();
   
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
@@ -60,29 +62,29 @@ const HeroSection = () => {
                 onValueChange={(value) => {
                   if (value) setTripType(value);
                 }}
-                className="justify-start"
+                className="justify-start flex-wrap"
               >
-                <ToggleGroupItem value="solo" aria-label="Solo trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                <ToggleGroupItem value="solo" aria-label="Solo trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30 mb-1">
                   <User className="mr-2 h-4 w-4" />
                   Solo
                 </ToggleGroupItem>
-                <ToggleGroupItem value="couple" aria-label="Couple trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                <ToggleGroupItem value="couple" aria-label="Couple trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30 mb-1">
                   <Heart className="mr-2 h-4 w-4" />
                   Couple
                 </ToggleGroupItem>
-                <ToggleGroupItem value="family" aria-label="Family trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                <ToggleGroupItem value="family" aria-label="Family trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30 mb-1">
                   <Users className="mr-2 h-4 w-4" />
                   Family
                 </ToggleGroupItem>
-                <ToggleGroupItem value="friends" aria-label="Friends trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                <ToggleGroupItem value="friends" aria-label="Friends trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30 mb-1">
                   <Users className="mr-2 h-4 w-4" />
                   Friends
                 </ToggleGroupItem>
-                <ToggleGroupItem value="business" aria-label="Business trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                <ToggleGroupItem value="business" aria-label="Business trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30 mb-1">
                   <Briefcase className="mr-2 h-4 w-4" />
                   Business
                 </ToggleGroupItem>
-                <ToggleGroupItem value="study" aria-label="Study trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                <ToggleGroupItem value="study" aria-label="Study trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30 mb-1">
                   <BookOpen className="mr-2 h-4 w-4" />
                   Study
                 </ToggleGroupItem>
