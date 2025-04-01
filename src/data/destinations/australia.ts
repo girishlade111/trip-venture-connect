@@ -8,28 +8,28 @@ export const australiaDestinations: Destination[] = [
     id: "australia-sydney",
     name: "Sydney",
     country: "Australia",
-    image: "https://images.unsplash.com/photo-1523428461295-92770a500339?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 215
   },
   {
     id: "australia-melbourne",
     name: "Melbourne",
     country: "Australia",
-    image: "https://images.unsplash.com/photo-1514395559318-cf30dab486be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1545044846-351ba102b6d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 189
   },
   {
     id: "australia-brisbane",
     name: "Brisbane",
     country: "Australia",
-    image: "https://images.unsplash.com/photo-1565074943747-9269abf8dda3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1629626755775-30aafa87841e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 124
   },
   {
     id: "australia-perth",
     name: "Perth",
     country: "Australia",
-    image: "https://images.unsplash.com/photo-1573935146153-d7358115c0e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1594022766835-58fee3c75a8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 98
   },
   
@@ -38,35 +38,35 @@ export const australiaDestinations: Destination[] = [
     id: "new-zealand-auckland",
     name: "Auckland",
     country: "New Zealand",
-    image: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 123
   },
   {
     id: "new-zealand-wellington",
     name: "Wellington",
     country: "New Zealand",
-    image: "https://images.unsplash.com/photo-1555673993-18c09bc4317c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1588735462522-5e3bb6a40588?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 87
   },
   {
     id: "new-zealand-christchurch",
     name: "Christchurch",
     country: "New Zealand",
-    image: "https://images.unsplash.com/photo-1578925193426-fd30de6c40ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1588159537901-a133fc2dd8a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 76
   },
   {
     id: "new-zealand-queenstown",
     name: "Queenstown",
     country: "New Zealand",
-    image: "https://images.unsplash.com/photo-1559703248-dcaaec9fab78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1595125990263-b246b1a1bdc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 65
   },
   {
     id: "new-zealand-rotorua",
     name: "Rotorua",
     country: "New Zealand",
-    image: "https://images.unsplash.com/photo-1578778942572-abeea01c4fa0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    image: "https://images.unsplash.com/photo-1583124903097-42144fdb4a14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
     eventCount: 54
   }
 ];
