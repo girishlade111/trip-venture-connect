@@ -70,6 +70,10 @@ const HeroSection = () => {
                   <User className="mr-2 h-4 w-4" />
                   Solo
                 </ToggleGroupItem>
+                <ToggleGroupItem value="couple" aria-label="Couple trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                  <Heart className="mr-2 h-4 w-4" />
+                  Couple
+                </ToggleGroupItem>
                 <ToggleGroupItem value="friends" aria-label="Friends trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
                   <Users className="mr-2 h-4 w-4" />
                   Friends
