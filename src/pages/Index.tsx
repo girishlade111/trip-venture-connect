@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, MapPin, Calendar, User, MessageCircle } from 'lucide-react';
+import { Search, MapPin, Calendar, User, MessageCircle, Ticket } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Navbar from '@/components/layout/Navbar';
