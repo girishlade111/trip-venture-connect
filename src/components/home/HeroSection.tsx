@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase, BookOpen, Plane, Car, Bed, Bus } from 'lucide-react';
+import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase, BookOpen, Plane, Car, Bed, Bus, Home, Hotel } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { DateRangePicker } from '@/components/ui/date-range-picker';
@@ -13,10 +13,14 @@ const HeroSection = () => {
   const [tripType, setTripType] = useState<string>("family");
   const [products, setProducts] = useState<string[]>(["flights"]);
   const [activities, setActivities] = useState<string[]>(["concerts"]);
+  const [accommodationType, setAccommodationType] = useState<string[]>(["hotels"]);
   const isMobile = useIsMobile();
   
   // Check if attractions is selected in products
   const showActivities = products.includes("attractions");
+  
+  // Check if stays is selected in products
+  const showAccommodations = products.includes("stays");
   
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
@@ -127,6 +131,41 @@ const HeroSection = () => {
                 </ToggleGroupItem>
               </ToggleGroup>
             </div>
+            
+            {showAccommodations && (
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 animate-fade-in">
+                <div className="mb-2 text-white text-sm">Accommodation Type:</div>
+                <ToggleGroup 
+                  type="multiple" 
+                  value={accommodationType} 
+                  onValueChange={(value) => {
+                    if (value.length) setAccommodationType(value);
+                  }}
+                  className="flex flex-wrap justify-start gap-2"
+                >
+                  <ToggleGroupItem value="hotels" aria-label="Hotels" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Hotel className="mr-2 h-4 w-4" />
+                    Hotels
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="apartments" aria-label="Apartments" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Building className="mr-2 h-4 w-4" />
+                    Apartments
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="homes" aria-label="Entire homes" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Home className="mr-2 h-4 w-4" />
+                    Entire homes
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="bnb" aria-label="Bed and Breakfasts" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Bed className="mr-2 h-4 w-4" />
+                    Bed and Breakfasts
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="hostels" aria-label="Hostels" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Building className="mr-2 h-4 w-4" />
+                    Hostels
+                  </ToggleGroupItem>
+                </ToggleGroup>
+              </div>
+            )}
             
             {showActivities && (
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
