@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils, Users, Heart, Briefcase } from 'lucide-react';
@@ -12,7 +11,6 @@ import { DateRangePicker } from '@/components/ui/date-range-picker';
 import { DateRange } from 'react-day-picker';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 
-// Sample data
 const featuredEvents: EventCardProps[] = [
   {
     id: '1',
@@ -83,6 +81,7 @@ const popularDestinations: DestinationCardProps[] = [
 const Index = () => {
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [tripType, setTripType] = useState<string>("family");
+  const [activities, setActivities] = useState<string[]>(["concerts"]);
   
   return (
     <div className="flex flex-col min-h-screen">
@@ -154,6 +153,43 @@ const Index = () => {
                     <ToggleGroupItem value="business" aria-label="Business trip" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
                       <Briefcase className="mr-2 h-4 w-4" />
                       Business
+                    </ToggleGroupItem>
+                  </ToggleGroup>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                  <div className="mb-2 text-white text-sm">Preferred Activities:</div>
+                  <ToggleGroup 
+                    type="multiple" 
+                    value={activities} 
+                    onValueChange={(value) => {
+                      if (value.length) setActivities(value);
+                    }}
+                    className="flex flex-wrap justify-start gap-2"
+                  >
+                    <ToggleGroupItem value="concerts" aria-label="Concerts" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Music className="mr-2 h-4 w-4" />
+                      Concerts
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="sports" aria-label="Sports" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Calendar className="mr-2 h-4 w-4" />
+                      Sports
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="theater" aria-label="Theater" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Ticket className="mr-2 h-4 w-4" />
+                      Theater
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="food" aria-label="Food & Dining" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Utensils className="mr-2 h-4 w-4" />
+                      Food & Dining
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="museums" aria-label="Museums" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <Building className="mr-2 h-4 w-4" />
+                      Museums
+                    </ToggleGroupItem>
+                    <ToggleGroupItem value="tours" aria-label="Tours" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                      <MapPin className="mr-2 h-4 w-4" />
+                      Tours
                     </ToggleGroupItem>
                   </ToggleGroup>
                 </div>
