@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import DestinationCard, { DestinationCardProps } from '@/components/destinations/DestinationCard';
+import { ArrowRight } from 'lucide-react';
 
 interface DestinationsSectionProps {
   popularDestinations: DestinationCardProps[];
@@ -21,8 +22,9 @@ const DestinationsSection = ({ popularDestinations }: DestinationsSectionProps) 
           </div>
           
           <Link to="/destinations">
-            <Button variant="outline" className="mt-4 md:mt-0">
-              View All Destinations
+            <Button className="mt-4 md:mt-0 group">
+              View All 160 Destinations
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
         </div>
@@ -31,6 +33,14 @@ const DestinationsSection = ({ popularDestinations }: DestinationsSectionProps) 
           {popularDestinations.map((destination) => (
             <DestinationCard key={destination.id} {...destination} />
           ))}
+        </div>
+        
+        <div className="mt-10 text-center">
+          <Link to="/destinations" className="inline-block">
+            <Button variant="outline" size="lg">
+              Browse All Destinations
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
