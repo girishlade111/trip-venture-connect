@@ -15,6 +15,9 @@ const HeroSection = () => {
   const [activities, setActivities] = useState<string[]>(["concerts"]);
   const isMobile = useIsMobile();
   
+  // Check if attractions is selected in products
+  const showActivities = products.includes("attractions");
+  
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute inset-0 z-[-1]">
@@ -125,38 +128,40 @@ const HeroSection = () => {
               </ToggleGroup>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
-              <div className="mb-2 text-white text-sm">Preferred Activities:</div>
-              <ToggleGroup 
-                type="multiple" 
-                value={activities} 
-                onValueChange={(value) => {
-                  if (value.length) setActivities(value);
-                }}
-                className="flex flex-wrap justify-start gap-2"
-              >
-                <ToggleGroupItem value="concerts" aria-label="Concerts" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
-                  <Music className="mr-2 h-4 w-4" />
-                  Concerts
-                </ToggleGroupItem>
-                <ToggleGroupItem value="sports" aria-label="Sports" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
-                  <Calendar className="mr-2 h-4 w-4" />
-                  Sports
-                </ToggleGroupItem>
-                <ToggleGroupItem value="theater" aria-label="Theater" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
-                  <Ticket className="mr-2 h-4 w-4" />
-                  Theater
-                </ToggleGroupItem>
-                <ToggleGroupItem value="food" aria-label="Food & Dining" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
-                  <Utensils className="mr-2 h-4 w-4" />
-                  Food & Dining
-                </ToggleGroupItem>
-                <ToggleGroupItem value="tours" aria-label="Tours" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
-                  <MapPin className="mr-2 h-4 w-4" />
-                  Tours
-                </ToggleGroupItem>
-              </ToggleGroup>
-            </div>
+            {showActivities && (
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2">
+                <div className="mb-2 text-white text-sm">Preferred Activities:</div>
+                <ToggleGroup 
+                  type="multiple" 
+                  value={activities} 
+                  onValueChange={(value) => {
+                    if (value.length) setActivities(value);
+                  }}
+                  className="flex flex-wrap justify-start gap-2"
+                >
+                  <ToggleGroupItem value="concerts" aria-label="Concerts" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Music className="mr-2 h-4 w-4" />
+                    Concerts
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="sports" aria-label="Sports" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Sports
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="theater" aria-label="Theater" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Ticket className="mr-2 h-4 w-4" />
+                    Theater
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="food" aria-label="Food & Dining" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <Utensils className="mr-2 h-4 w-4" />
+                    Food & Dining
+                  </ToggleGroupItem>
+                  <ToggleGroupItem value="tours" aria-label="Tours" className="bg-white/10 backdrop-blur-sm border-white/20 text-white data-[state=on]:bg-white/30">
+                    <MapPin className="mr-2 h-4 w-4" />
+                    Tours
+                  </ToggleGroupItem>
+                </ToggleGroup>
+              </div>
+            )}
             
             <Button className="rounded-full px-6 w-full md:w-auto self-end">
               <Search size={18} className="mr-2" />
