@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, MapPin, Calendar, User, MessageCircle, Ticket, Building, Music, Utensils } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,6 +8,8 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import EventCard, { EventCardProps } from '@/components/events/EventCard';
 import DestinationCard, { DestinationCardProps } from '@/components/destinations/DestinationCard';
+import { DateRangePicker } from '@/components/ui/date-range-picker';
+import { DateRange } from 'react-day-picker';
 
 // Sample data
 const featuredEvents: EventCardProps[] = [
@@ -78,6 +80,8 @@ const popularDestinations: DestinationCardProps[] = [
 ];
 
 const Index = () => {
+  const [dateRange, setDateRange] = useState<DateRange | undefined>();
+  
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -103,15 +107,27 @@ const Index = () => {
                 Find and book tickets for live events, concerts, theater, sports, and more, wherever your travels take you.
               </p>
               
-              <div className="relative bg-white p-1 rounded-full shadow-xl flex items-center mb-8">
-                <div className="flex-1 ml-3">
-                  <Input
-                    type="text"
-                    placeholder="Where are you going?"
-                    className="border-none focus-visible:ring-0 focus-visible:ring-offset-0"
+              <div className="flex flex-col space-y-3 bg-white/5 backdrop-blur-sm p-4 rounded-xl mb-8">
+                <div className="flex flex-col md:flex-row gap-3">
+                  <div className="relative bg-white rounded-full shadow-xl flex items-center flex-1">
+                    <div className="flex-1 ml-3">
+                      <Input
+                        type="text"
+                        placeholder="Where are you going?"
+                        className="border-none focus-visible:ring-0 focus-visible:ring-offset-0"
+                      />
+                    </div>
+                    <Search size={18} className="mr-4 text-gray-500" />
+                  </div>
+                  
+                  <DateRangePicker 
+                    dateRange={dateRange}
+                    onDateRangeChange={setDateRange}
+                    className="md:w-[280px]"
                   />
                 </div>
-                <Button className="rounded-full px-6">
+                
+                <Button className="rounded-full px-6 w-full md:w-auto self-end">
                   <Search size={18} className="mr-2" />
                   Search
                 </Button>
