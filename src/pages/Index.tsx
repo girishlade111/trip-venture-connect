@@ -199,45 +199,6 @@ const Index = () => {
                   Search
                 </Button>
               </div>
-              
-              <div className="flex flex-wrap gap-4">
-                <Link to="/events/category/concerts">
-                  <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <Music size={16} className="mr-2" />
-                    Concerts
-                  </Button>
-                </Link>
-                <Link to="/events/category/sports">
-                  <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <Calendar size={16} className="mr-2" />
-                    Sports
-                  </Button>
-                </Link>
-                <Link to="/events/category/theater">
-                  <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <Ticket size={16} className="mr-2" />
-                    Theater
-                  </Button>
-                </Link>
-                <Link to="/events/category/food">
-                  <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <Utensils size={16} className="mr-2" />
-                    Food &amp; Dining
-                  </Button>
-                </Link>
-                <Link to="/events/category/museums">
-                  <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <Building size={16} className="mr-2" />
-                    Museums
-                  </Button>
-                </Link>
-                <Link to="/events/category/tours">
-                  <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
-                    <MapPin size={16} className="mr-2" />
-                    Tours
-                  </Button>
-                </Link>
-              </div>
             </div>
           </div>
         </section>
