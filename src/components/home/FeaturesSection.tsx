@@ -8,7 +8,7 @@ const FeaturesSection = () => {
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="flex flex-col items-center text-center">
             <div className="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-4 text-ocean-600">
               <MapPin size={28} />
@@ -23,29 +23,9 @@ const FeaturesSection = () => {
             <div className="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-4 text-ocean-600">
               <Plane size={28} />
             </div>
-            <h3 className="text-xl font-medium mb-2">Discover Flights</h3>
+            <h3 className="text-xl font-medium mb-2">Discover Flights, Stays, and Things to Do</h3>
             <p className="text-muted-foreground">
-              Find the best flight options for your travel dates.
-            </p>
-          </div>
-          
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-4 text-ocean-600">
-              <Bed size={28} />
-            </div>
-            <h3 className="text-xl font-medium mb-2">Discover Stays</h3>
-            <p className="text-muted-foreground">
-              Browse accommodations from hotels to unique rentals.
-            </p>
-          </div>
-          
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-4 text-ocean-600">
-              <Book size={28} />
-            </div>
-            <h3 className="text-xl font-medium mb-2">Discover Things to do</h3>
-            <p className="text-muted-foreground">
-              Explore activities, attractions and experiences.
+              Find flights, accommodations, and explore local experiences all in one place.
             </p>
           </div>
           
@@ -55,7 +35,7 @@ const FeaturesSection = () => {
             </div>
             <h3 className="text-xl font-medium mb-2">Plan Your Trip</h3>
             <p className="text-muted-foreground">
-              Add events to your calendar and create your itinerary.
+              Add events to your calendar and create your perfect itinerary.
             </p>
           </div>
           
@@ -63,9 +43,9 @@ const FeaturesSection = () => {
             <div className="w-16 h-16 bg-ocean-100 rounded-full flex items-center justify-center mb-4 text-ocean-600">
               <Ticket size={28} />
             </div>
-            <h3 className="text-xl font-medium mb-2">Book Tickets</h3>
+            <h3 className="text-xl font-medium mb-2">Book the Tickets</h3>
             <p className="text-muted-foreground">
-              Securely purchase tickets for your selected events.
+              Securely purchase all your tickets in one seamless checkout.
             </p>
           </div>
         </div>
