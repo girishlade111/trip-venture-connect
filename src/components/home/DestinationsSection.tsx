@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import DestinationCard from '@/components/destinations/DestinationCard';
-import { Destination } from '@/data/destinations';
+import { Destination, allDestinations } from '@/data/destinations';
 import { ArrowRight } from 'lucide-react';
 
 interface DestinationsSectionProps {
@@ -11,6 +11,8 @@ interface DestinationsSectionProps {
 }
 
 const DestinationsSection = ({ popularDestinations }: DestinationsSectionProps) => {
+  const totalDestinationsCount = allDestinations.length;
+  
   return (
     <section className="py-16 bg-teal-50">
       <div className="container">
@@ -24,7 +26,7 @@ const DestinationsSection = ({ popularDestinations }: DestinationsSectionProps) 
           
           <Link to="/destinations">
             <Button className="mt-4 md:mt-0 group">
-              View All {popularDestinations.length} Available Destinations
+              View All {totalDestinationsCount} Available Destinations
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
