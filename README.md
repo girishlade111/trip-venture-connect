@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+# TripVenture Connect
 
-## Project info
+TripVenture Connect is an AI-powered travel discovery web app that helps travelers find and book events, activities, and destinations worldwide. Originally scaffolded with Lovable, it is a client-side React + TypeScript single-page application — no backend, no database, no login.
 
-**URL**: https://lovable.dev/projects/94ed028e-3e2a-491d-9431-1fb40e962528
+## Features
 
-## How can I edit this code?
+- **Hero search experience** — landing page with product, activity, and accommodation type pickers
+- **Discover** — browse concerts, sports, theater, and other events around the world
+- **Destinations** — destination cards with detail views (`/destinations/:id`)
+- **Virtual assistant section** — AI-travel-companion themed UI blocks
+- **Full shadcn/ui component library** — dialogs, drawers, carousels, calendars, charts, forms, toasts
+- Dark/light theme support via `next-themes`
 
-There are several ways of editing your application.
+## Tech stack
 
-**Use Lovable**
+- **Framework:** React 18 + TypeScript
+- **Build tool:** Vite 5
+- **Routing:** react-router-dom (BrowserRouter)
+- **UI:** shadcn/ui (Radix primitives), Tailwind CSS 3, lucide-react icons
+- **State/data:** @tanstack/react-query, react-hook-form + zod
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/94ed028e-3e2a-491d-9431-1fb40e962528) and start prompting.
+## Quick start
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requirements: Node.js 18+ and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install
+npm run dev        # start dev server (default: http://localhost:8080)
+npm run build      # production build -> dist/
+npm run preview    # preview the production build
 ```
 
-**Edit a file directly in GitHub**
+## Project structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+src/
+  main.tsx              # entry point
+  App.tsx               # router + providers
+  pages/                # Index, Discover, Destinations, NotFound
+  components/
+    home/               # hero, features, destinations/events sections, CTA
+    events/             # EventCard
+    destinations/       # DestinationCard
+    layout/             # Navbar, Footer
+    ui/                 # shadcn/ui component library
+index.html              # HTML shell (entry references /src/main.tsx)
+```
 
-**Use GitHub Codespaces**
+## Deploy notes
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The app is fully static and deployable to any static host. For GitHub Pages (served under `/trip-venture-connect/`), build with a relative base so asset paths resolve from the subdirectory:
 
-## What technologies are used for this project?
+```sh
+npx vite build --base=./
+```
 
-This project is built with .
+Copy the build output into the served root and include a copy of `index.html` as `404.html` so client-side routes keep working on refresh.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## License
 
-## How can I deploy this project?
+MIT.
 
-Simply open [Lovable](https://lovable.dev/projects/94ed028e-3e2a-491d-9431-1fb40e962528) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Built by Girish Lade — https://ladestack.in
